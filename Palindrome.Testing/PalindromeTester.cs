@@ -13,13 +13,13 @@ namespace Palindrome.Testing
           public static bool Test_Palindrome(string text)
           {
                //arrange
+               var sut = new PalindromeChecker();
                bool test;
                //act
-               test = isPalindrome(text);
+               test = sut.isPalindrome(text);
                //assert
-               Assert.NotNull(test);
                Assert.True(test);
           } 
      }
 }
-}
+
