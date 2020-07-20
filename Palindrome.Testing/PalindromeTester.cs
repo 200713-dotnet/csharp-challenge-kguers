@@ -9,6 +9,8 @@ namespace Palindrome.Testing
           [Theory]
           [InlineData("racecar")]
           [InlineData("$1ff1$")]
+          [InlineData("Test")]
+          [InlineData("*%KDMV#WVR1234")]
           public void Test_Palindrome(string text)
           {
                //arrange
@@ -17,7 +19,16 @@ namespace Palindrome.Testing
                //act
                test = sut.IsPalindrome(text);
                //assert
-               Assert.True(test);
+               if(test)
+               {
+                    //Palindrome
+                    Assert.True(test);
+               }
+               else
+               {
+                    //Not a Palindrome
+                    Assert.False(test);
+               }
           } 
      }
 }
