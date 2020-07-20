@@ -4,7 +4,7 @@ namespace Palindrome.Domain
 {
      public class PalindromeChecker
      {
-          public static bool IsPalindrome(string text)
+          public bool IsPalindrome(string text)
           {
                if (text.Length <= 1)
                     return true;
@@ -16,7 +16,7 @@ namespace Palindrome.Domain
                          return IsPalindrome(text.Substring(1, text.Length - 2));
                }
           }
-          public static void Main()
+          public void Main()
           {
                Console.Write("\n\n Recursion : Check whether a string ia Palindrome or not :\n");
                Console.Write("---------------------------------------------------------------\n");

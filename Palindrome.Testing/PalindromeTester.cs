@@ -8,15 +8,14 @@ namespace Palindrome.Testing
      {
           [Theory]
           [InlineData("racecar")]
-          [InlineData("Test")]
           [InlineData("$1ff1$")]
-          public static bool Test_Palindrome(string text)
+          public void Test_Palindrome(string text)
           {
                //arrange
                var sut = new PalindromeChecker();
                bool test;
                //act
-               test = sut.isPalindrome(text);
+               test = sut.IsPalindrome(text);
                //assert
                Assert.True(test);
           } 
